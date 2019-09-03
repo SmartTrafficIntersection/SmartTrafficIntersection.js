@@ -6,12 +6,14 @@ const EventEmitter = require('events');
 class Simulator extends EventEmitter {
   /**
    * Simulator constructor
+   * @param {number} interval between ticks
    */
-  constructor() {
+  constructor(interval) {
     super();
     this.lanes = [];
     this.sources = [];
     this.sinks = [];
+    this.interval = interval;
   }
 
   /**
@@ -23,10 +25,17 @@ class Simulator extends EventEmitter {
   }
 
   /**
+   * Changes simulator intervals
+   * @param {number} interval between ticks
+   */
+  changeInterval(interval) {
+    this.interval = interval;
+  }
+  /**
    * Simulates traffic
    */
   tick() {
-    // Not implemented
+    this.emit('tick');
   }
 }
 
