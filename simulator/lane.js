@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-var Segment = require('./segment');
-
-function Lane(name){
-    this.name = name;
-    this.segments = [];
-} 
-
-Lane.prototype.addSegment = function(segment) {
-    this.segments.append(segment);
-};
-
-module.exports = Lane;
-=======
 const EventEmitter = require('events');
 
 /**
@@ -47,4 +33,3 @@ class Lane extends EventEmitter {
 }
 
 module.exports = Lane;
->>>>>>> refs/remotes/origin/master
