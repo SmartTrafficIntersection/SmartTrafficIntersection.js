@@ -1,10 +1,10 @@
-const EventEmitter = require('events');
+const Cell = require('./cell');
 const uuidv1 = require('uuid/v1');
 
 /**
  * Traffic source, used to generate traffic into a lane segment
  */
-class Source extends EventEmitter {
+class Source extends Cell {
   /**
    * Constructor
    * @param {string} name is the Source name

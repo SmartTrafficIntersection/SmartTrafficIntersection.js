@@ -1,9 +1,9 @@
-const EventEmitter = require('events');
+const Cell = require('./cell');
 
 /**
  * A Segment is a lane component to cope with direction
  */
-class Segment extends EventEmitter {
+class Segment extends Cell {
   /**
    * Road segment, the smallest road unit to hold one or more cars
    * @param {string} name name of this segment
