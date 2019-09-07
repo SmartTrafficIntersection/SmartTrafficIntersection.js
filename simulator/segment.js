@@ -8,8 +8,8 @@ class Segment extends Cell {
    * Road segment, the smallest road unit to hold one or more cars
    * @param {string} name name of this segment
    * @param {integer} capacity maximum car size units can this segment fit
-   * @param {integer} inFlux maximum units of car sizes can enter this segment
-   * @param {integer} outFlux maximum units of car size can leave thsi segment
+   * @param {number} inFlux maximum units of car sizes can enter this segment
+   * @param {number} outFlux maximum units of car size can leave thsi segment
    */
   constructor(name, capacity, inFlux, outFlux) {
     super();

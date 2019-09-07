@@ -1,3 +1,4 @@
+const Errors = require('./errors');
 /**
  * Grid is made of multiple cells
  */
@@ -24,7 +25,10 @@ class Grid {
    * @param {Cell} cell to be added
    */
   addCell(x, y, cell) {
-    this.cells[y][x] = cell;
+    if (x < 0 || x > this.columns || y < 0 || y > this.rows) {
+      throw (Errors.invalidValue);
+    }
+    this.cells[x][y] = cell;
   }
 }
 
