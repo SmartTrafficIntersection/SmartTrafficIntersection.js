@@ -24,7 +24,7 @@ class Grid {
    * @param {number} y coordinate of the cell
    * @param {Cell} cell to be added
    */
-  addCell(x, y, cell) {
+  setCell(x, y, cell) {
     if (x < 0 || x > this.columns || y < 0 || y > this.rows) {
       throw (Errors.invalidValue);
     }

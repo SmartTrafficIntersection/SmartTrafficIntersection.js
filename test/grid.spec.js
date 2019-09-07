@@ -52,41 +52,41 @@ describe('Grid', function() {
     const outFlux = 3;
     const inFlux = 5;
     describe('addCell', function() {
-      it('Should have a function addCell', function() {
-        grid.should.have.property('addCell');
+      it('Should have a function setCell', function() {
+        grid.should.have.property('setCell');
       });
       it('Should be able to add a Source', function() {
         const source = new Source('source', outFlux);
-        grid.addCell(x, y, source);
+        grid.setCell(x, y, source);
         grid.cells[x][y].should.equal(source);
       });
       it('Should be able to add a Sink', function() {
         const sink = new Sink('sink', inFlux);
-        grid.addCell(x, y, sink);
+        grid.setCell(x, y, sink);
         grid.cells[x][y].should.equal(sink);
       });
       it('Should be able to add a lane segment', function() {
         const capacity = 10;
         const segment = new Segment('segment', capacity, inFlux, outFlux);
-        grid.addCell(x, y, segment);
+        grid.setCell(x, y, segment);
         grid.cells[x][y].should.equal(segment);
       });
       it('Should not allow x < 0', function() {
         const cell = new Cell();
         (function() {
-          grid.addCell(-1, y, cell);
+          grid.setCell(-1, y, cell);
         }).should.throw();
       });
       it('Should not allow x > number of columns', function() {
         const cell = new Cell();
         (function() {
-          grid.addCell(x, rows+2, cell);
+          grid.setCell(x, rows+2, cell);
         }).should.throw();
       });
       it('Should not allow y < 0', function() {
         const cell = new Cell();
         (function() {
-          grid.addCell(x, -1, cell);
+          grid.setCell(x, -1, cell);
         }).should.throw();
       });
       it('Should not allow x > number of rows');
