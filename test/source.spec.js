@@ -31,7 +31,7 @@ describe('Source', function() {
       source.outFlux.should.equal(outFlux);
     });
   });
-  describe('Behaviour', function() {
+  describe('Behavior', function() {
     it('Should generate a flux');
     it(`Flux should be less than or equal to ${outFlux}`);
   });

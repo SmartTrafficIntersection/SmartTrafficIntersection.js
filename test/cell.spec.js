@@ -18,14 +18,8 @@ describe('Cell', function() {
         cell.should.have.property('eventEmitter');
       });
     });
-    describe('X Coordinate', function() {
-
-    });
-    describe('Y Coordinate', function() {
-
-    });
   });
-  describe('Behaviour', function() {
+  describe('Behavior', function() {
 
   });
 });

@@ -9,10 +9,8 @@ class Cell {
    * @param {number} x coordinate
    * @param {number} y coordinate
    */
-  constructor(x, y) {
+  constructor() {
     this.eventEmitter = new EventEmitter();
-    this.x = x;
-    this.y = y;
   }
 }
 

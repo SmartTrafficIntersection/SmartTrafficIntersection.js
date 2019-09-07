@@ -33,7 +33,7 @@ describe('Simulator', function() {
     });
   });
 
-  describe('Behaviour', function() {
+  describe('Behavior', function() {
 
   });
 
