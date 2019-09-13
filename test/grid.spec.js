@@ -43,7 +43,13 @@ describe('Grid', function() {
     });
 
     describe('Cells', function() {
+      it('Should contain a 2D array Cells');
+      it('Should build the array given Grid Size properties');
+    });
 
+    describe('Timer', function() {
+      it('Should contain a property timer');
+      it('Should be a number representing milliseconds for the simulator');
     });
   });
   describe('Behavior', function() {
@@ -90,6 +96,16 @@ describe('Grid', function() {
         }).should.throw();
       });
       it('Should not allow x > number of rows');
+    });
+
+    describe('getAdjacentCells', function() {
+      it('Should have a method getAdjacentCells');
+      it('Should detect adjacent cells from one caller cell');
+    });
+  });
+  describe('Events', function() {
+    describe('tick', function() {
+      it('Should emit an event tick at given timer');
     });
   });
 });
